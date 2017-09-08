@@ -1,0 +1,39 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Safari Sheets</title>
+    <meta name="description" content="An app to send SafariBooks data to Google Sheets">
+    <link id="favicon" rel="icon" href="https://glitch.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <h1>Safari Sheets</h1>
+      <h2>An app to send SafariBooks data to Google Sheets</h2>
+    </header>
+
+    <div id="bookform_div">
+      <form action="/submit-book-data" method="post" id="bookform">
+         <textarea rows="6" cols="35" name="bookdata" id="bookdata"></textarea> 
+         <input type="submit">
+      </form>
+      <br>     
+      <p>
+        <a href="/logoff">Done?</a>
+      </p>
+    </div>   
+
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>  
+    <script src="./senddata.js"></script>
+    <script src="https://button.glitch.me/button.js" data-style="glitch"></script>
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+  </body>
+</html>
